@@ -1,217 +1,236 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Sachin M B</title>
-        <link rel="stylesheet" href="css/style.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
-        <script>
-            function fade($ele) {
-                $ele.fadeIn(1000).delay(3000).fadeOut(1000, function() {
-                    var $next = $(this).next('.quote');
-                    fade($next.length > 0 ? $next : $(this).parent().children().first());
-            });
-            }
-            fade($('.quoteLoop > .quote').first());
+  <head>
+    <title>Sachin M B</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+  </head>
+  <body>
+    <!-- Header Section -->
 
-            /* Navigation */
-
-            $(window).scroll(function() {
-
-                if ($(window).scrollTop() > 300) {
-                    $('.main_nav').addClass('sticky');
-                } else {
-                    $('.main_nav').removeClass('sticky');
-                }
-            });
-
-            /* Smooth Scrolling & Mobile Navigation */
-
-            jQuery(document).ready(function($) {
-
-            $('.smoothscroll').on('click',function (e) {
-                    e.preventDefault();
-
-                    var target = this.hash,
-                    $target = $(target);
-
-                    $('html, body').stop().animate({
-                        'scrollTop': $target.offset().top
-                    }, 800, 'swing', function () {
-                        window.location.hash = target;
-                    });
-                });
-                
-                $('.mobile-toggle').click(function() {
-                if ($('.main_nav').hasClass('open-nav')) {
-                    $('.main_nav').removeClass('open-nav');
-                } else {
-                    $('.main_nav').addClass('open-nav');
-                }
-            });
-
-            $('.main_nav li a').click(function() {
-                if ($('.main_nav').hasClass('open-nav')) {
-                    $('.navigation').removeClass('open-nav');
-                    $('.main_nav').removeClass('open-nav');
-                }
-            });
-            
-            });
-
-
-            TweenMax.staggerFrom(".heading", 0.8, {opacity: 0, y: 20, delay: 0.2}, 0.4);
-        </script>
-    </head>
-    <body>
-        <!-- Header Section -->
-
-        <header id="header">
-            <div class="main_nav">
-                <div class="container">
-                    <div class="mobile-toggle"> <span></span> <span></span> <span></span> </div>
-                    <nav>
-                        <ul>
-                            <li style="padding-right: 200px;"><a style="color: black; font-size: 20px;" class="smoothscroll" href="#header">Sachin M B</a></li>
-                            <li><a class="smoothscroll" href="#header">Home</a></li>
-                            <li><a class="smoothscroll" href="#about">About</a></li>
-                            <li><a class="smoothscroll" href="#portfolio">Projects</a></li>
-                            <!-- <li><a class="smoothscroll" href="#">Photography</a></li> -->
-                            <li><a class="smoothscroll" href="#contact">Contact</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-            <div class="title">
-            <div><span class="typcn typcn-heart-outline icon heading"></span></div>
-            <div class="smallsep heading"></div>
-            <h4 class="heading">Hello there,</h4>
-            <h1 class="heading retroshadow">I'm Sachin.</h1>
-            <h2 class="heading">I <strong>code</strong>, <strong>develop</strong> and <strong>photograph</strong>.</h2>
-            <a class="smoothscroll" href="#about">
-            <div class="mouse">
-                <div class="wheel"></div>
-            </div>
-            </a> </div>
-            <a class="smoothscroll" href="#about">
-            <div class="scroll-down"></div>
-            </a> 
-        </header>
-    
-  <!-- About Section
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->  
-    
-  <section id="about">
-    <div class="container">
-      <div class="row">
-        <h1>About</h1>
-        <div class="block"></div>
-        <p>I am an immigrant MS Computer Science graduate from Tiruppur, Tamil Nadu, India. I also work as a Graduate Assistant in the UIC ACCC. This is my last year at UIC. I love to work in software development and web development projects, as it's so much fun than mundane low-level programming and hardware stuff (No offense). I also developed a greater degree of liking towards data science and analysis after taking the CS418 (Intro. to Data Science) class in my first semester. I was able to do more computation with data than I ever imagined and it interested me to explore more in this field. I hope my next step in exploring this field is data visualization, which is why I enrolled in this class. My favorite colors are black and purple (I guess, you figured it out from the webiste).<br><br>
-
-          I have 2 dogs (back at my home), their names are Stuart and Kutty. I developed an interest towards photography in my school days, which turned into my passion now, especially photographing birds. I am an amateur birder and bird photographer for 4 years now and I have observed over 150+ species of birds. Some day I dream to be a person, who travels to all parts of the world and photograph all the birds there is.<br><br>
-          
-          My other interests are reading, which I picked up randomly one day and not able to bore about it since. I have set a target to read 52 books this year (pretty high for a begineer), which I am half way through it. My favorite authors are Erin Morgenstern, Oscar Wilde, Haruki Murakami and George Orwell. I also like playing racing games, FIFA and a die-hard fan of the Assassin's Creed franchise.
-          </p>
+    <header id="header">
+      <div class="main_nav">
+        <div class="container">
+          <div class="mobile-toggle">
+            <span></span> <span></span> <span></span>
+          </div>
+          <nav>
+            <ul>
+              <li style="padding-right: 200px">
+                <a
+                  style="color: black; font-size: 20px"
+                  class="smoothscroll"
+                  href="#header"
+                  >Sachin M B</a
+                >
+              </li>
+              <li><a class="smoothscroll" href="#header">Home</a></li>
+              <li><a class="smoothscroll" href="#about">About</a></li>
+              <li><a class="smoothscroll" href="#portfolio">Projects</a></li>
+              <!-- <li><a class="smoothscroll" href="#">Photography</a></li> -->
+              <li><a class="smoothscroll" href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
-    </div>
-  </section>
-  
-  <!-- Portfolio Section
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->  
-  
-  <section id="portfolio">
-    <div class="container">
-      <h1>Projects</h1>
-      <div class="block"></div>
-      <div class="project-row">
-        <div class="project-column">
-          <div class="card">
+      <div class="title">
+        <div><span class="typcn typcn-heart-outline icon heading"></span></div>
+        <div class="smallsep heading"></div>
+        <h4 class="heading">Hello there,</h4>
+        <h1 class="heading retroshadow">I'm Sachin.</h1>
+        <h2 class="heading">
+          I <strong>code</strong>, <strong>develop</strong> and
+          <strong>photograph</strong>.
+        </h2>
+        <a class="smoothscroll" href="#about">
+          <div class="mouse">
+            <div class="wheel"></div>
+          </div>
+        </a>
+      </div>
+      <a class="smoothscroll" href="#about">
+        <div class="scroll-down"></div>
+      </a>
+    </header>
+
+    <!-- About Section
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <section id="about">
+      <div class="container">
+        <div class="row">
+          <h1>About</h1>
+          <div class="block"></div>
+          <p>
+            I am an immigrant MS Computer Science graduate from Tiruppur, Tamil
+            Nadu, India. I also work as a Graduate Assistant in the UIC ACCC.
+            This is my last year at UIC. I love to work in software development
+            and web development projects, as it's so much fun than mundane
+            low-level programming and hardware stuff (No offense). I also
+            developed a greater degree of liking towards data science and
+            analysis after taking the CS418 (Intro. to Data Science) class in my
+            first semester. I was able to do more computation with data than I
+            ever imagined and it interested me to explore more in this field. I
+            hope my next step in exploring this field is data visualization,
+            which is why I enrolled in this class. My favorite colors are black
+            and purple (I guess, you figured it out from the webiste).<br /><br />
+
+            I have 2 dogs (back at my home), their names are Stuart and Kutty. I
+            developed an interest towards photography in my school days, which
+            turned into my passion now, especially photographing birds. I am an
+            amateur birder and bird photographer for 4 years now and I have
+            observed over 150+ species of birds. Some day I dream to be a
+            person, who travels to all parts of the world and photograph all the
+            birds there is.<br /><br />
+
+            My other interests are reading, which I picked up randomly one day
+            and not able to bore about it since. I have set a target to read 52
+            books this year (pretty high for a begineer), which I am half way
+            through it. My favorite authors are Erin Morgenstern, Oscar Wilde,
+            Haruki Murakami and George Orwell. I also like playing racing games,
+            FIFA and a die-hard fan of the Assassin's Creed franchise.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <section id="portfolio">
+      <div class="container">
+        <h1>Projects</h1>
+        <div class="block"></div>
+        <div class="prow">
+          <div class="pcolumn">
+            <a href="https://natours-booking-app.herokuapp.com/"
+              ><img style="width: 100%" src="img/natours_project.png"
+            /></a>
+          </div>
+          <div class="pcolumn">
             <h5>Natours</h5>
-            <a href="https://natours-booking-app.herokuapp.com/"><img src="img/natours_project.png"></a>
             <p>A node based web application built to view and book tours.</p>
           </div>
         </div>
-
-        <div class="project-column">
-          <div class="card">
+        <div class="prow">
+          <div class="pcolumn">
+            <a href="https://github.com/sachinmb27/Intelligent-Search-Engine"
+              ><img style="width: 100%" src="img/uic-search-engine.png"
+            /></a>
+          </div>
+          <div class="pcolumn">
             <h5>Intelligent Search Engine</h5>
-            <a href="https://github.com/sachinmb27/Intelligent-Search-Engine"><img src="img/uic-search-engine.png"></a>
-            <p>A smart search engine using a vector based method for the UIC domain.</p>
+            <p>
+              A smart search engine using a vector based method for the UIC
+              domain.
+            </p>
           </div>
         </div>
-      
-        <div class="project-column">
-          <div class="card">
+        <div class="prow">
+          <div class="pcolumn">
+            <a href="https://github.com/sachinmb27/SafeRd"
+              ><img style="width: 100%" src="img/saferd.png"
+            /></a>
+          </div>
+          <div class="pcolumn">
             <h5>Road Anomaly Detection</h5>
-            <a href="https://github.com/sachinmb27/SafeRd"><img src="img/saferd.png"></a>
-            <p>A project to predict the anomalies present in the roads using smartphone.</p>
+            <p>
+              A project to predict the anomalies present in the roads using
+              smartphone.
+            </p>
           </div>
         </div>
-        
-        <div class="project-column">
-          <div class="card">
+        <div class="prow">
+          <div class="pcolumn">
+            <a href="https://sachinmb27.github.io/"
+              ><img style="width: 100%" src="img/covid-19.png"
+            /></a>
+          </div>
+          <div class="pcolumn">
             <h5>COVID-19 and the Future</h5>
-            <a href="https://sachinmb27.github.io/"><img src="img/covid-19.png"></a>
-            <p>The project spans over various ways by which the people of America will be affected post COVID-19.</p>
+            <p>
+              The project spans over various ways by which the people of America
+              will be affected post COVID-19.
+            </p>
           </div>
         </div>
-        
-        <div class="project-column">
-          <div class="card">
+        <div class="prow">
+          <div class="pcolumn">
+            <a
+              href="https://github.com/sachinmb27/Contour-Based-Blood-Vessel-Segmentation-in-Retinal-Fundus-Images"
+              ><img style="width: 100%" src="img/blood-vessel.jpg"
+            /></a>
+          </div>
+          <div class="pcolumn">
             <h5>Blood Vessel Segmentation</h5>
-            <a href="https://github.com/sachinmb27/Contour-Based-Blood-Vessel-Segmentation-in-Retinal-Fundus-Images"><img src="img/blood-vessel.jpg"></a>
-            <p>A project to segment blood vessels from retinal fundus images using OpenCV.</p>
+            <p>
+              A project to segment blood vessels from retinal fundus images
+              using OpenCV.
+            </p>
           </div>
         </div>
-
-        <div class="project-column">
-          <div class="card">
+        <div class="prow">
+          <div class="pcolumn">
+            <a href="http://iplauction.herokuapp.com/"
+              ><img style="width: 100%" src="img/ipl-auction.png"
+            /></a>
+          </div>
+          <div class="pcolumn">
             <h5>IPL Cricket Fantasy</h5>
-            <a href="http://iplauction.herokuapp.com/"><img src="img/ipl-auction.png"></a>
             <p>A project to play the cricket fantasy game for IPL 2021.</p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  
-  <!-- Contact Section
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->  
-  
-  <section id="contact">
-    <div class="container">
-      <h1>Contact</h1>
-      <div class="block"></div>
-      <form>
-        <div class="row">
-          <div class="six columns">
-            <label for="exampleRecipientInput">Name</label>
-            <input class="u-full-width" type="text">
+    </section>
+
+    <!-- Contact Section
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <section id="contact">
+      <div class="container">
+        <h1>Contact</h1>
+        <div class="block"></div>
+        <form>
+          <div class="row">
+            <div class="six columns">
+              <label for="exampleRecipientInput">Name</label>
+              <input class="u-full-width" type="text" />
+            </div>
+            <div class="six columns">
+              <label for="exampleEmailInput">Email</label>
+              <input class="u-full-width" type="email" />
+            </div>
           </div>
-          <div class="six columns">
-            <label for="exampleEmailInput">Email</label>
-            <input class="u-full-width" type="email">
+          <div class="row">
+            <label for="exampleMessage">Message</label>
+            <textarea class="u-full-width"></textarea>
+            <input class="button-primary" type="submit" value="Submit" />
           </div>
-        </div>
-        <div class="row">
-          <label for="exampleMessage">Message</label>
-          <textarea class="u-full-width"></textarea>
-          <input class="button-primary" type="submit" value="Submit">
-        </div>
-      </form>
-    </div>
-  </section>
-  
-  <!-- Footer Section
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->  
-  
-  <footer>
-    <div class="container">
-      <div class="nine columns">
-        <p>Created with love by Sachin.</p>
+        </form>
       </div>
-      <div class="three columns"> <span class="typcn typcn-social-facebook-circular socialIcons"></span> <span class="typcn typcn-social-instagram-circular socialIcons"></span> <span class="typcn typcn-social-google-plus-circular socialIcons"></span> <span class="typcn typcn-social-linkedin-circular socialIcons"></span> </div>
-    </div>
-  </footer>
-    </body>
+    </section>
+
+    <!-- Footer Section
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <footer>
+      <div class="container">
+        <div class="nine columns">
+          <p>Created with love by Sachin.</p>
+        </div>
+        <div class="three columns">
+          <span class="typcn typcn-social-facebook-circular socialIcons"></span>
+          <span
+            class="typcn typcn-social-instagram-circular socialIcons"
+          ></span>
+          <span
+            class="typcn typcn-social-google-plus-circular socialIcons"
+          ></span>
+          <span class="typcn typcn-social-linkedin-circular socialIcons"></span>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
