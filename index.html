@@ -5,6 +5,10 @@
     <link rel="stylesheet" href="css/style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
     <script>
       function fade($ele) {
         $ele
@@ -104,6 +108,27 @@
           </nav>
         </div>
       </div>
+      <div id="fixedsocial">
+        <div class="socialflat">
+          <a href="https://www.linkedin.com/in/sachinmb" target="_blank"
+            ><img
+              style="padding-left: 4px"
+              src="img/socials/linkedin.png"
+              width="40px"
+              height="40px"
+          /></a>
+        </div>
+        <div class="socialflat">
+          <a href="https://www.github.com/sachinmb27" target="_blank">
+            <img src="img/socials/github.png" width="50px" height="50px"
+          /></a>
+        </div>
+        <div class="socialflat">
+          <a href="https://www.instagram.com/sachin_dul/" target="_blank">
+            <img src="img/socials/instagram.png" width="50px" height="50px"
+          /></a>
+        </div>
+      </div>
       <div class="title">
         <div><span class="typcn typcn-heart-outline icon heading"></span></div>
         <div class="smallsep heading"></div>
@@ -167,88 +192,270 @@
 
     <!-- Portfolio Section
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-
-    <section id="portfolio">
+    <section id="contact">
       <div class="container">
         <h1>Projects</h1>
         <div class="block"></div>
-        <div class="prow">
-          <div class="pcolumn">
-            <a href="https://natours-booking-app.herokuapp.com/"
-              ><img style="width: 100%" src="img/natours_project.png"
-            /></a>
-          </div>
-          <div class="pcolumn">
-            <h5>Natours</h5>
-            <p>A node based web application built to view and book tours.</p>
-          </div>
-        </div>
-        <div class="prow">
-          <div class="pcolumn">
-            <a href="https://github.com/sachinmb27/Intelligent-Search-Engine"
-              ><img style="width: 100%" src="img/uic-search-engine.png"
-            /></a>
-          </div>
-          <div class="pcolumn">
-            <h5>Intelligent Search Engine</h5>
-            <p>
-              A smart search engine using a vector based method for the UIC
-              domain.
-            </p>
-          </div>
-        </div>
-        <div class="prow">
-          <div class="pcolumn">
-            <a href="https://github.com/sachinmb27/SafeRd"
-              ><img style="width: 100%" src="img/saferd.png"
-            /></a>
-          </div>
-          <div class="pcolumn">
-            <h5>Road Anomaly Detection</h5>
-            <p>
-              A project to predict the anomalies present in the roads using
-              smartphone.
-            </p>
-          </div>
-        </div>
-        <div class="prow">
-          <div class="pcolumn">
-            <a href="https://sachinmb27.github.io/"
-              ><img style="width: 100%" src="img/covid-19.png"
-            /></a>
-          </div>
-          <div class="pcolumn">
-            <h5>COVID-19 and the Future</h5>
-            <p>
-              The project spans over various ways by which the people of America
-              will be affected post COVID-19.
-            </p>
-          </div>
-        </div>
-        <div class="prow">
-          <div class="pcolumn">
-            <a
-              href="https://github.com/sachinmb27/Contour-Based-Blood-Vessel-Segmentation-in-Retinal-Fundus-Images"
-              ><img style="width: 100%" src="img/blood-vessel.jpg"
-            /></a>
-          </div>
-          <div class="pcolumn">
-            <h5>Blood Vessel Segmentation</h5>
-            <p>
-              A project to segment blood vessels from retinal fundus images
-              using OpenCV.
-            </p>
-          </div>
-        </div>
-        <div class="prow">
-          <div class="pcolumn">
-            <a href="http://iplauction.herokuapp.com/"
-              ><img style="width: 100%" src="img/ipl-auction.png"
-            /></a>
-          </div>
-          <div class="pcolumn">
-            <h5>IPL Cricket Fantasy</h5>
-            <p>A project to play the cricket fantasy game for IPL 2021.</p>
+        <div class="wrapper">
+          <div class="projectcontainer">
+            <!-- Natours -->
+
+            <div class="projectcontainer__item">
+              <div class="projectcontainer__item--category">Natours</div>
+              <div class="projectcontainer__item--img">
+                <img
+                  src="img/projects/natours_project.png"
+                  width="300px"
+                  height="150px"
+                />
+              </div>
+              <div class="projectcontainer__item--desc">
+                <div class="project-flex-container">
+                  <p class="project-flex-items">Node.js</p>
+                  <p class="project-flex-items">Express</p>
+                  <p class="project-flex-items">MongoDB</p>
+                </div>
+                A node based web application built to view and book tours along
+                with user authentication and payment handling through Stripe.
+              </div>
+              <div class="project-source">
+                <a
+                  class="project-links"
+                  target="_blank"
+                  href="https://natours-booking-app.herokuapp.com/"
+                  >View Project</a
+                >
+                <a
+                  href="https://github.com/sachinmb27/Natours-Web-App"
+                  target="_blank"
+                >
+                  <i class="fab fa-github fa-lg" style="margin-top: 6px"></i
+                ></a>
+              </div>
+            </div>
+            <!-- Intelligent Search Engine -->
+
+            <div class="projectcontainer__item">
+              <div class="projectcontainer__item--category">
+                Intelligent Search Engine
+              </div>
+              <div class="projectcontainer__item--img">
+                <img
+                  src="img/projects/uic-search-engine.png"
+                  width="300px"
+                  height="150px"
+                />
+              </div>
+              <div class="projectcontainer__item--desc">
+                <div class="project-flex-container">
+                  <p class="project-flex-items">Python</p>
+                  <p class="project-flex-items">Flask</p>
+                  <p class="project-flex-items">JSON</p>
+                </div>
+                A smart search engine using a vector based method for the UIC
+                domain.
+              </div>
+              <div class="project-source">
+                <a
+                  class="project-links"
+                  target="_blank"
+                  href="https://github.com/sachinmb27/Intelligent-Search-Engine"
+                  >View Project</a
+                >
+                <a
+                  href="https://github.com/sachinmb27/Intelligent-Search-Engine"
+                  target="_blank"
+                  ><i class="fab fa-github fa-lg" style="margin-top: 6px"></i
+                ></a>
+              </div>
+            </div>
+
+            <!-- Road Anomaly Detection -->
+
+            <div class="projectcontainer__item">
+              <div class="projectcontainer__item--category">
+                Road Anomaly Detection
+              </div>
+              <div class="projectcontainer__item--img">
+                <img
+                  src="img/projects/saferd.png"
+                  width="300px"
+                  height="150px"
+                />
+              </div>
+              <div class="projectcontainer__item--desc">
+                <div class="project-flex-container">
+                  <p class="project-flex-items">Python</p>
+                  <p class="project-flex-items">Android</p>
+                  <p class="project-flex-items">AWS</p>
+                </div>
+                A project to predict the anomalies present in the roads using
+                acceleromater and gyroscope readings from smartphone.
+              </div>
+              <div class="project-source">
+                <a
+                  class="project-links"
+                  href="https://github.com/sachinmb27/SafeRd"
+                  target="_blank"
+                  >View Project</a
+                >
+                <a href="https://github.com/sachinmb27/SafeRd" target="_blank"
+                  ><i class="fab fa-github fa-lg" style="margin-top: 6px"></i
+                ></a>
+              </div>
+            </div>
+
+            <!-- COVID-19 and the Future -->
+
+            <div class="projectcontainer__item">
+              <div class="projectcontainer__item--category">
+                COVID-19 and the Future
+              </div>
+              <div class="projectcontainer__item--img">
+                <img
+                  src="img/projects/covid-19.png"
+                  width="300px"
+                  height="150px"
+                />
+              </div>
+              <div class="projectcontainer__item--desc">
+                <div class="project-flex-container">
+                  <p class="project-flex-items">CSS3</p>
+                  <p class="project-flex-items">D3.js</p>
+                  <p class="project-flex-items">C3.js</p>
+                </div>
+                The project spans over various ways by which the people of USA
+                will be affected post COVID-19.
+              </div>
+              <div class="project-source">
+                <a
+                  class="project-links"
+                  href="https://sachinmb27.github.io/"
+                  target="_blank"
+                  >View Project</a
+                >
+                <a
+                  href="https://github.com/sachinmb27/sachinmb27.github.io"
+                  target="_blank"
+                  ><i class="fab fa-github fa-lg" style="margin-top: 6px"></i
+                ></a>
+              </div>
+            </div>
+
+            <!-- Blood Vessel Segmentation -->
+
+            <div class="projectcontainer__item">
+              <div class="projectcontainer__item--category">
+                Blood Vessel Segmentation
+              </div>
+              <div class="projectcontainer__item--img">
+                <img
+                  src="img/projects/blood-vessel.jpg"
+                  width="300px"
+                  height="250px"
+                />
+              </div>
+              <div class="projectcontainer__item--desc">
+                <div class="project-flex-container">
+                  <p class="project-flex-items">Python</p>
+                  <p class="project-flex-items">OpenCV</p>
+                </div>
+                A project to segment blood vessels from retinal fundus images
+                using OpenCV.
+              </div>
+              <div class="project-source">
+                <a
+                  class="project-links"
+                  href="https://github.com/sachinmb27/Contour-Based-Blood-Vessel-Segmentation-in-Retinal-Fundus-Images"
+                  target="_blank"
+                  >View Project</a
+                >
+                <a
+                  href="https://github.com/sachinmb27/Contour-Based-Blood-Vessel-Segmentation-in-Retinal-Fundus-Images"
+                  target="_blank"
+                  ><i class="fab fa-github fa-lg" style="margin-top: 6px"></i
+                ></a>
+              </div>
+            </div>
+
+            <!-- IPL Cricket Fantasy Game -->
+
+            <div class="projectcontainer__item">
+              <div class="projectcontainer__item--category">
+                IPL Cricket Fantasy Game
+              </div>
+              <div class="projectcontainer__item--img">
+                <img
+                  src="img/projects/ipl-auction.png"
+                  width="300px"
+                  height="150px"
+                />
+              </div>
+              <div class="projectcontainer__item--desc">
+                <div
+                  class="project-flex-container"
+                  style="padding-bottom: 20px"
+                >
+                  <p class="project-flex-items">Python</p>
+                  <p class="project-flex-items">Node.js</p>
+                  <p class="project-flex-items">MongoDB</p>
+                </div>
+                A fantasy game build around IPL 2021 where the points are
+                scrapped from a scoring website and updated as a leaderboard.
+              </div>
+              <div class="project-source" style="padding-top: 20px">
+                <a
+                  class="project-links"
+                  href="https://iplfantasypointscit.herokuapp.com/"
+                  target="_blank"
+                  >View Project</a
+                >
+                <a
+                  href="https://github.com/skmagarajan/IPL-PointsTable"
+                  target="_blank"
+                  ><i class="fab fa-github fa-lg" style="margin-top: 6px"></i
+                ></a>
+              </div>
+            </div>
+
+            <!-- COVID-19 Tracker -->
+
+            <div class="projectcontainer__item" style="margin: 0 auto">
+              <div class="projectcontainer__item--category">
+                COVID-19 Tracker
+              </div>
+              <div class="projectcontainer__item--img">
+                <img
+                  src="img/projects/covid19-tracker.png"
+                  width="250px"
+                  height="150px"
+                />
+              </div>
+              <div class="projectcontainer__item--desc">
+                <div
+                  class="project-flex-container"
+                  style="padding-bottom: 20px"
+                >
+                  <p class="project-flex-items">Vue</p>
+                  <p class="project-flex-items">Node.js</p>
+                </div>
+                A project built in Vue to track the cases and deaths caused by
+                COVID-19 in real time.
+              </div>
+              <div class="project-source" style="padding-top: 20px">
+                <a
+                  class="project-links"
+                  href="https://trackcovid19-vue.herokuapp.com/"
+                  target="_blank"
+                  >View Project</a
+                >
+                <a
+                  href="https://github.com/sachinmb27/COVID-19-Tracker"
+                  target="_blank"
+                  ><i class="fab fa-github fa-lg" style="margin-top: 6px"></i
+                ></a>
+              </div>
+            </div>
           </div>
         </div>
       </div>

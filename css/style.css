@@ -760,55 +760,145 @@ form {
 
 /* Projects */
 
-.prow {
+#fixedsocial {
+  top: 42%;
+  height: 200px;
+  width: 60px;
+  position: fixed;
+  right: 0;
+}
+
+.socialflat {
+  height: 50px;
+  width: 50px;
+  transition: ease 500ms;
+  background-size: 50px;
+  opacity: 1;
+}
+
+.socialflat:hover {
+  height: 60px;
+  width: 50px;
+  background-size: 60px;
+  opacity: 0.5;
+  transition: ease 500ms;
+  margin-left: -20px;
+  width: 60px;
+}
+
+/* New */
+
+.wrapper {
+  max-width: 900px;
+  margin: auto;
+}
+
+@media screen and (max-width: 899px) {
+  .wrapper {
+    padding: 0 20px;
+  }
+}
+
+.projectcontainer {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.projectcontainer__item {
+  text-decoration: none;
+  background-color: #ffffff;
+  width: calc((100% - 90px) / 2);
+  margin: 0 30px 30px 0;
+  box-shadow: 5px 5px 2px #eeeff1;
+  border: 1px solid #fcf7fd;
+  border-radius: 6px;
+  box-sizing: border-box;
+  min-width: 200px;
+}
+.projectcontainer__item:hover {
+  box-shadow: 7px 7px 14px rgba(0, 0, 0, 0.4);
+}
+@media screen and (max-width: 899px) {
+  .projectcontainer__item {
+    width: calc((100% - 60px) / 2);
+  }
+}
+@media screen and (max-width: 767px) {
+  .projectcontainer__item {
+    width: 100%;
+    margin: 30px auto 0;
+    max-width: 300px;
+  }
+}
+@media screen and (max-width: 899px) {
+  .projectcontainer__item:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .projectcontainer__item:nth-child(2n) {
+    margin: 30px auto 0;
+  }
+}
+.projectcontainer__item:nth-child(2n) {
+  margin-right: 0;
+}
+@media screen and (max-width: 899px) {
+  .projectcontainer__item:nth-child(2n) {
+    margin-right: 30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .projectcontainer__item:nth-child(2n) {
+    margin: 30px auto 0;
+  }
+}
+.projectcontainer__item--category {
+  padding: 10px;
+  background-color: gray;
+  color: #ffffff;
+  border-radius: 6px 6px 0px 0px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+.projectcontainer__item--img {
+  text-align: center;
+  padding: 20px 20px 0px;
+  font-size: 76px;
+}
+
+.projectcontainer__item--img img {
+  width: 100%;
+}
+
+.projectcontainer__item--desc {
+  padding: 0 20px 20px 20px;
+  font-size: 14px;
+  text-align: center;
+  font-weight: 500;
+  color: #4b384c;
+}
+
+.project-flex-container {
   display: flex;
   justify-content: center;
-  padding-bottom: 50px;
 }
 
-.pcolumn {
-  float: left;
-  width: 33.33%;
-  padding: 5px;
+.project-flex-items {
+  margin-right: 10px;
+  border: 1px solid;
+  padding: 2px;
+  border-radius: 3px;
 }
 
-.pcolumn:nth-child(2n) {
-  padding-left: 70px;
-  width: 50%;
+.project-source {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
 }
 
-.pcolumn img {
-  border: 1px solid black;
-  padding: 10px;
+.project-links {
+  padding-right: 20px;
+  text-decoration: none;
 }
-
-.prow::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-/* Remove extra left and right margins, due to padding */
-
-/* Responsive columns */
-/* @media screen and (max-width: 600px) {
-  .project-column {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-  }
-} */
-
-/* Style the counter cards */
-/* .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 16px;
-  text-align: center;
-  background-color: #f1f1f1;
-}
-
-.card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-} */
